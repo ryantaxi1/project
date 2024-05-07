@@ -93,9 +93,6 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
 
     var PERMISSION_ID = 44
 
-    //private String accessToken = "PASTE_YOUR_ACCESS_TOKEN_HERE";
-    //private val accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzhlNzU3M2ZkYmM1NzQxZjhkZDIwZDcxODhlYTFhYzlmLTE2NTI2ODc5NDUiLCJpc3MiOiJTSzhlNzU3M2ZkYmM1NzQxZjhkZDIwZDcxODhlYTFhYzlmIiwic3ViIjoiQUM3NjRjMDUwODY2Njk3YTdmOTAxY2U5ODk3NWQ3MGE3MiIsImV4cCI6MTY1MjY5MTU0NSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiYWxpY2UiLCJ2b2ljZSI6eyJvdXRnb2luZyI6eyJhcHBsaWNhdGlvbl9zaWQiOiJBUGJjYmUzMDU2YjI1NTRjZjUwNzc4YTE2MzlmZTQ2OWZmIn0sInB1c2hfY3JlZGVudGlhbF9zaWQiOiJDUjc1MzI2OWM5YTZlZDczMzdhMjliZDRhMWQ3MTI0MWQ2In19fQ.HGE21bH6FFODhBOio7XZHJgRv6euWZCthIyk4YFUu3w"
-
     var accessToken: String? = null
     var callId: String? = null
 
