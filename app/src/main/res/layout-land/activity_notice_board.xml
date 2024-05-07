@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="horizontal"
+    tools:context=".activity.NoticeBoardActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:background="@drawable/bg_screen_gradient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/noticeboard"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_border_purple"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNotificationTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:fontFamily="@font/euclid_square_regular"
+                        android:text="We’ve launched the new software meter"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/ivExpandCollapse"
+                        android:paddingHorizontal="@dimen/_3sdp"
+                        android:textColor="@color/new_light_blue"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivExpandCollapse"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_collapse"/>
+
+                </RelativeLayout>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/tvFindMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sed neque sed consequat. Morbi eu fermentum lorem.Non congue justo, et porttitor lectus. Ut sed nisl non eros finibus aliquam nec at arcu. Suspendisse fringilla felis vel arcu interdum volutpat. Ut vitae erat dignissim, molestie metus in condimentum nulla."
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@drawable/bg_darkblue_notice_shadow"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_20sdp">
+
+        <LinearLayout
+            android:id="@+id/llBackToDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_round_green"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_previous"
+                app:tint="@color/dark_blue" />
+
+            <TextView
+                android:id="@+id/tvBtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:gravity="center"
+                android:text="@string/back_to_screen"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

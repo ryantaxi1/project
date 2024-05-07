@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                app:cardElevation="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginVertical="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"/>
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:singleLine="true"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123123324"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:singleLine="true"
+                        android:textStyle="bold"/>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Total Waiting Charges :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_grey"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtWaitingChargeAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Total Travel Amounts :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_grey"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtTravelAmounts"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Car Charges :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_grey"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtCarCharges"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amounts :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtTotalAmounts"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Start Location :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_grey"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtStartLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="No Data"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="End Location :"
+                            android:layout_weight="5"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_grey"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:id="@+id/txtEndLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="No Data"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginVertical="@dimen/_5sdp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

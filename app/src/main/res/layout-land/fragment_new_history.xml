@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_new1"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:paddingTop="@dimen/_15sdp"
+    tools:context=".activity.ui.history.NewHistoryFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/euclid_square_semibold"
+            android:maxLines="1"
+            android:text="@string/history"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvTripThisMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/euclid_square_regular"
+            android:layout_toStartOf="@+id/tvMonthTripTotal"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:text="Trips this month:"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvMonthTripTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/euclid_square_medium"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_toStartOf="@+id/llDeleteAllCheck"
+            android:layout_marginEnd="@dimen/_50sdp"
+            tools:text="50"
+            android:background="@drawable/bg_rounded_edit_text_white"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_10ssp" />
+
+        <LinearLayout
+            android:id="@+id/llDeleteAllCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_round_green"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_medium"
+                android:maxLines="1"
+                android:text="Delete all checked"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_10ssp" />
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_new_delete" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_5sdp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/date"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ccp_ic_arrow_drop_down"
+                app:tint="@color/dark_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/pickup_time"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ccp_ic_arrow_drop_down"
+                app:tint="@color/dark_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/drop_off_time"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ccp_ic_arrow_drop_down"
+                app:tint="@color/dark_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/pickup_location"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/dropoff_location"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:maxLines="1"
+                android:text="@string/fare"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ccp_ic_arrow_drop_down"
+                app:tint="@color/dark_blue" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:text="@string/edit"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/euclid_square_semibold"
+                android:maxLines="1"
+                android:text="@string/delete"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTripList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_trip_history" />
+
+    <TextView
+        android:id="@+id/txtNoTripData"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:gravity="center"
+        android:text="@string/no_trip_data_found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

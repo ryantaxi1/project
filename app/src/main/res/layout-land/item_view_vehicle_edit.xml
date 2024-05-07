@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_gray"
+    android:backgroundTint="@color/gray_new2"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginVertical="@dimen/_2sdp">
+
+    <LinearLayout
+        android:id="@+id/llPlatNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="12"
+        android:paddingVertical="@dimen/_7sdp"
+        android:background="@drawable/bg_white_redius">
+
+        <CheckBox
+            android:id="@+id/cbCarCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.70"
+            android:scaleY="0.70"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:button="@drawable/bg_new_gray_checkbox_selection"
+            android:checked="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <TextView
+            android:id="@+id/tvPlateNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/euclid_square_regular"
+            android:text="@string/your_vehicles"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_new_delete"
+        android:visibility="visible" />
+
+</LinearLayout>

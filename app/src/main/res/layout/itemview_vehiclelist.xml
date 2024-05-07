@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_35sdp"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingTop="@dimen/_5sdp">
+
+    <TextView
+        android:id="@+id/tvPlatNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/euclid_square_regular"
+        android:paddingHorizontal="@dimen/_3sdp"
+        android:text="T979"
+        android:layout_centerVertical="true"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/_10ssp" />
+
+    <ImageView
+        android:id="@+id/ivCurrentCar"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_selected_car"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray_new2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+</RelativeLayout>

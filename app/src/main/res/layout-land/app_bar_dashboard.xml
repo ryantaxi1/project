@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashboardActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@android:color/transparent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:background="@drawable/top_bg"
+            android:paddingBottom="@dimen/_20sdp"
+            app:popupTheme="@style/Theme.Taxi1IncarApp.PopupOverlay" >
+
+        <!--    <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/_10sdp"/>-->
+            <ImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/app_name_logo"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/white" />
+        </androidx.appcompat.widget.Toolbar>
+
+<!--        <include layout="@layout/cutom_toolbar"/>-->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_dashboard" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

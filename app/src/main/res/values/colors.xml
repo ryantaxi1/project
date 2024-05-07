@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grayBorder">#E3E3E3</color>
+    <color name="theme_color">#00C360</color>
+    <color name="secondary_theme_color">#01A457</color>
+    <color name="dark_blue">#051C2C</color>
+    <color name="light_blue_line">#775692BC</color>
+    <color name="light_blue">#BFD8FF</color>
+    <color name="red">#C30010</color>
+    <color name="gray">#D1D1D1</color>
+    <color name="gray_new">#E6E9EC</color>
+    <color name="gray_new1">#CCD3DA</color>
+    <color name="gray_new2">#99A6B4</color>
+    <color name="gray_new3">#80E6E9EC</color>
+    <color name="text_grey">#3E3E3E</color>
+    <color name="button_purple">#7f7aef</color>
+    <color name="green">#00C96D</color>
+    <color name="green_text">#005841</color>
+    <color name="green_text_new">#00C962</color>
+    <color name="light_green">#00fb89</color>
+    <color name="light_green1">#04FF7F</color>
+    <color name="new_blue">#07273E</color>
+    <color name="new_blue2">#072C45</color>
+    <color name="new_purple">#5248DA</color>
+    <color name="new_purple1">#8476F5</color>
+    <color name="new_light_blue">#8AB6FD</color>
+    <color name="grey">#BAC2C9</color>
+</resources>

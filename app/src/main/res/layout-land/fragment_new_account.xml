@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:ellipsize="end"
+        android:fontFamily="@font/euclid_square_semibold"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_15sdp"
+        android:text="@string/account"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:background="@color/gray_new1">
+
+        <FrameLayout
+            android:id="@+id/flAccountContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@drawable/bg_darkblue_notice_shadow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_20sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/rlOverview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/ic_account_selection_right_side"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvOverview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:maxLines="1"
+                    android:text="@string/overview"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:id="@+id/icOverview"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_new_eye" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEditAccountInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvEditInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:maxLines="1"
+                    android:text="@string/edit_account_info"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:id="@+id/icEditInfo"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_new_edit" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlChangeVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvChangeVehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:maxLines="1"
+                    android:text="@string/change_vehicle"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:id="@+id/icVehicle"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_new_vehicle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tvChangePassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:maxLines="1"
+                    android:text="@string/change_password"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:id="@+id/icPassword"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_new_key" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:id="@+id/llBtnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:background="@drawable/bg_round_green"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_6sdp">
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_semibold"
+                    android:maxLines="3"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/logout"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/llEditAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:background="@drawable/bg_round_border_green"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp">
+
+                <TextView
+                    android:id="@+id/tvEditInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_regular"
+                    android:maxLines="3"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/edit_account_info"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/ic_new_arrow" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:id="@+id/llChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:background="@drawable/bg_round_border_green"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp">
+
+                <TextView
+                    android:id="@+id/tvChangePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_regular"
+                    android:maxLines="3"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/change_password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/ic_new_arrow" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:id="@+id/llChangeVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:background="@drawable/bg_round_border_green"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp">
+
+                <TextView
+                    android:id="@+id/tvChangeVehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_regular"
+                    android:maxLines="3"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/change_vehicle"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/ic_new_arrow" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:id="@+id/llBtnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:background="@drawable/bg_round_green"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp">
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_semibold"
+                    android:maxLines="3"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/logout"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
