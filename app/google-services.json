@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "733361746832",
+    "project_id": "taxi1-duress-alarm",
+    "storage_bucket": "taxi1-duress-alarm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733361746832:android:384e0dd06dc0c40f37b915",
+        "android_client_info": {
+          "package_name": "com.taxi1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733361746832-9il8d9p5di9v6rgf94rj5op2fool4c9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.taxi1",
+            "certificate_hash": "4f987a2ac8d21fc8a50891f8af896317fe74d3c7"
+          }
+        },
+        {
+          "client_id": "733361746832-rpv9jo68jsrn166ptu2mbujufs700egn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPQYPkB7iAfBsJ4dPDxAQOxDe5SaL4aCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733361746832-rpv9jo68jsrn166ptu2mbujufs700egn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

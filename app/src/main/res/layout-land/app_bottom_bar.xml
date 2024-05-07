@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_gradient">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/im_compare"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/ivHome"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_home_new" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2sdp" />
+
+                <TextView
+                    android:id="@+id/tvHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/home"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />-->
+
+        <RelativeLayout
+            android:id="@+id/rlAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/im_compare"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivAccount"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_person_new" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:gravity="center"
+                    android:text="@string/account"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />-->
+
+        <RelativeLayout
+            android:id="@+id/rlMeter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/im_compare"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivMeter"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_meter_new" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tvMeter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:gravity="center"
+                    android:text="Meter"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />-->
+
+        <RelativeLayout
+            android:id="@+id/rlHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/im_compare"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivHelp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_info_new" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tvGetHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:gravity="center"
+                    android:text="Get help"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />-->
+
+        <RelativeLayout
+            android:id="@+id/rlTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.80"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/im_compare"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/ivTraining"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_trainging_new" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2sdp" />
+
+                <TextView
+                    android:id="@+id/tvTraining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_square_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/training"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--<Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />-->
+
+        <Button
+            android:id="@+id/btnSOS"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_round_purple"
+            android:fontFamily="@font/euclid_square_semibold"
+            android:paddingHorizontal="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:text="@string/sos"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+</LinearLayout>

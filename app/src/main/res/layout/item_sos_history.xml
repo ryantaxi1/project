@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+95 12345645"
+            android:textColor="@color/theme_color"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Time:"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_10ssp"
+                />
+            <TextView
+                android:id="@+id/tvstime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00Am"
+                android:layout_weight="1"
+                android:textColor="@color/theme_color"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_10ssp"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Time:"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_10ssp"
+                />
+            <TextView
+                android:id="@+id/tvetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:30Am"
+                android:layout_weight="1"
+                android:textColor="@color/theme_color"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_10ssp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="4"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
