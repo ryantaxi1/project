@@ -990,7 +990,7 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
         return DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
             // Place a call
             val contact = (dialog as AlertDialog).findViewById<EditText>(R.id.contact)
-            params["To"] = "+916356192632"
+            params["To"] = contact.text.toString()
             params["Url"] = YOUR_TWIML_URL
             val connectOptions = ConnectOptions.Builder(accessToken.toString())
                 .params(params)
@@ -1568,8 +1568,7 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
     fun newTwilioInAppCall(){
 //        params["From"] = YOUR_TWILIO_PHONE_NUMBER
 //        params["To"] = contactNumber!!
-//        params["To"] = "+919662168132"
-        params["To"] = "+916356192632"
+        params["To"] = "+911234567890"
         params["Url"] = YOUR_TWIML_URL
         val connectOptions = ConnectOptions.Builder(accessToken.toString())
             .params(params)
