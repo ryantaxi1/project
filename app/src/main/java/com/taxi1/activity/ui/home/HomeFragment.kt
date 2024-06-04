@@ -1443,7 +1443,7 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
         val contact = dialogView.findViewById<EditText>(R.id.contact)
         contact.setHint(R.string.callee)
         //contact.setText(contactNumber)
-        contact.setText("+919377122494")
+        contact.setText("+911234567890")
         alertDialogBuilder.setView(dialogView)
         return alertDialogBuilder.create()
     }
@@ -1491,7 +1491,7 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
 
 //            alertDialog = createCallDialog(callClickListener(), cancelCallClickListener(), requireActivity())
             alertDialog = createCallDialog(callClickListener(), newCancelCallClickListener(), requireActivity())
-            alertDialog!!.show()
+//            alertDialog!!.show()
 
             makeCall()
         } else {
@@ -1521,8 +1521,7 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
         takepermissionNew()
 
 //        setCallUI()
-
-//        newTwilioInAppCall()
+        newTwilioInAppCall()
 
 //        /*    val skype_intent = Intent("android.intent.action.VIEW")
 //            skype_intent.setClassName("com.skype.raider", "com.skype4life.MainActivity")
@@ -1567,14 +1566,16 @@ class HomeFragment : Fragment(), IAccessTokenView, ICallStartView, ICommanView, 
 
     fun newTwilioInAppCall(){
 //        params["From"] = YOUR_TWILIO_PHONE_NUMBER
-//        params["To"] = contactNumber!!
-        params["To"] = "+911234567890"
+        params["To"] = contactNumber!!
         params["Url"] = YOUR_TWIML_URL
         val connectOptions = ConnectOptions.Builder(accessToken.toString())
             .params(params)
             .build()
         activeCall = Voice.connect(requireContext(), connectOptions, callListener)
         setCallUI()
+        //call api to save start data on server
+        callStartController = CallStartController(requireContext(), this)
+        callStartController!!.callStart(params["To"].toString())
     }
 
     fun isSkypeClientInstalled(myContext: Context): Boolean {
