@@ -34,6 +34,12 @@ import com.android.taxi1in_carapp.activity.Controller.TripStartContinueFinishCon
 import com.android.taxi1in_carapp.activity.NewDashboardActivity
 import com.android.taxi1in_carapp.databinding.FragmentNewMeterScreenBinding
 import com.android.taxi1in_carapp.utils.onTouchListener
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationRequest
+import com.google.android.gms.location.LocationResult
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
 import com.taxi1.ViewResponse.ITripStartContinueStopView
 import com.taxi1.utils.Constants
 import com.taxi1.utils.Constants.USER_MODEL
@@ -44,7 +50,7 @@ import com.taxi1.utils.Utils.getLocationName
 import com.taxi1.utils.Utils.showToast
 
 
-class NewMeterFragment : Fragment(), ITripStartContinueStopView, LocationListener {
+class NewMeterFragment : Fragment(), ITripStartContinueStopView, com.google.android.gms.location.LocationListener {
     private var TAG = "NewMeterFragment"
     lateinit var binding : FragmentNewMeterScreenBinding
     private var newDashboardActivity: NewDashboardActivity? = null
@@ -68,7 +74,8 @@ class NewMeterFragment : Fragment(), ITripStartContinueStopView, LocationListene
     private var isCertainDistCross : Boolean = false
     var serverDistance: Int = 90
 
-
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var locationCallback: LocationCallback
 
     private var isCursorVisible = false
 //    private val cursorColor = R.color.green // Change this to set the cursor color
@@ -99,13 +106,33 @@ class NewMeterFragment : Fragment(), ITripStartContinueStopView, LocationListene
 
 //        tripStartContinueStopController?.getActiveTrip()
 
-        locationManager = requireActivity().getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
         mainHandler = Handler(Looper.getMainLooper())
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+        locationCallback = object : LocationCallback() {
+            override fun onLocationResult(locationResult: LocationResult) {
+                val location = locationResult.lastLocation
+                // Handle the location update
+            }
+        }
+
         if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+            ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            val locationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 0)
+//                .setMinUpdateIntervalMillis(1000) // 10 seconds
+                .build()
+            fusedLocationClient.requestLocationUpdates(locationRequest, this, null)
+        } else {
+//            requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+        }
+
+        locationManager = requireActivity().getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
+        /*if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
             ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 //            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 60000, 0f, this)
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this)
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this)*/
 
         // TODO proper manage to maxi to regular switching
         /*if(myToggle!!.isChecked){

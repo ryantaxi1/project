@@ -109,4 +109,6 @@ dependencies {
 
     // Otp view
     implementation 'io.github.chaosleung:pinview:1.4.4'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 }
