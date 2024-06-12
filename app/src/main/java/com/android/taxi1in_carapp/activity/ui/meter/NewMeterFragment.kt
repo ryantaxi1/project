@@ -98,6 +98,7 @@ class NewMeterFragment : Fragment(), ITripStartContinueStopView, com.google.andr
         }else{
             serverDistance = userData?.result?.distance!!
         }
+        Log.d(TAG, "server distance : $serverDistance")
 
         // TODO only testing purpose
         carType = Constants.REGULAR_CAR
@@ -119,7 +120,7 @@ class NewMeterFragment : Fragment(), ITripStartContinueStopView, com.google.andr
         if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
             ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 
-            val locationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 0)
+            val locationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 2000)
 //                .setMinUpdateIntervalMillis(1000) // 10 seconds
                 .build()
             fusedLocationClient.requestLocationUpdates(locationRequest, this, null)
@@ -166,14 +167,14 @@ class NewMeterFragment : Fragment(), ITripStartContinueStopView, com.google.andr
                             /**
                              * Temporary comment code
                              */
-                            /*if(distCalInMeter > serverDistance && endPointLocation!=null){
+                            if(distCalInMeter > serverDistance && endPointLocation!=null){
                                 startPointLocation = Location(endPointLocation!!);
                                 isCertainDistCross = true
                                 Log.d(TAG, "onLocationChanged last location to new location distance $serverDistance meter: ")
                             }else {
                                 isCertainDistCross = false
                                 Log.d(TAG, "onLocationChanged not distance to $serverDistance meters: ")
-                            }*/
+                            }
 
                             tripID?.let {
                                 tripStartContinueStopController?.sendTripStartContinueStop(
